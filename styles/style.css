@@ -9,8 +9,122 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .visually-hidden:not(:focus):not(:active) { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; /* added line */}
 
 
+
+
+
+/* 
+font-family: 'Work Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Noto Serif', serif; 
+*/
+
+
 img { display: block; width: 100%; }
 html { font-size: 62.5%; }
 a, a:visited { text-decoration: none; color: inherit }
 ul { list-style: none; padding: 0; margin: 0; }
 .wrapper { max-width: 1080px; width: 90%; margin: 0 auto; }
+
+
+nav {
+ 
+  font-size: 1.6rem;
+  font-family: 'Work Sans', sans-serif;
+}
+.headerNav ul {
+  padding-top: 30px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.headerNav a {
+  padding: 10px;
+}
+.headerNav li:hover {
+  color: #FF4040;
+}
+
+header {
+  background-image: url("../assets/header.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+header .wrapper {
+  position: relative;
+  min-height: 95vh;
+}
+header h1 {
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+  font-size: 1.6rem;
+  font-family: 'Work Sans', sans-serif;
+  width: 50%;
+  font-weight: 400;
+}
+
+
+.projectsList li{
+  display: flex;
+}
+
+.projectsList li div{
+  width: 50%;
+}
+
+.projectImage{
+  padding: 25px;
+}
+.projectImage img {
+  box-shadow: 10px 10px 0px #FF8476;
+  position: relative;
+  right: 50px;
+}
+
+
+.projectText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  font-size: 1.6rem;
+  padding: 25px;
+}
+.projectText h2 {
+  font-family: 'Noto Serif', serif; 
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+.projectText p {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 75px;
+  margin-bottom: 30px;
+}
+.projectText a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  background-color: #505050;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+.wiggle {
+  position: absolute;
+  top: 20%;
+  right: -100px;
+}
+
+.projectsList li:nth-of-type(2n){
+  flex-direction: row-reverse;
+}
+.projectsList li:nth-of-type(2n) .projectImage img{
+  right: 0;
+  left: 50px;
+  box-shadow: -10px 10px 0px #FFE676;
+}
+.projectsList li:nth-of-type(2n) .wiggle{
+  right: 0;
+  left: -100px;
+}
