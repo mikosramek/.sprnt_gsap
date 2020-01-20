@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel='stylesheet' href='styles/style.css'>
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif%20Open+Sans:400,400i,600%20Work+Sans&display=swap" rel="stylesheet"> 
-  <title>SPRNT</title>
+  <title>.SPRNT</title>
 </head>
 <body>
   <header id="home">
@@ -36,21 +36,27 @@
     <section class="projects" id="works">
       <div class="wrapper">
         <ul class="projectsList">
-          <li>
-            <div class="projectImage"><img src="./assets/project1.jpg" alt=""></div class="projectImage">
+          <li class="project">
+            <div class="projectImage">
+              <img src="./assets/project1.jpg" alt="A red sun blazes in a cloudy evening.">
+              <button class="closeProject">x</button>
+            </div class="projectImage">
             <div class="projectText">
               <h2>Project 1</h2>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eveniet perferendis iste id inventore qui reprehenderit dolores commodi, alias expedita.</p>
-              <a href="#">View project</a>
+              <button class="viewProject">View project</button>
               <div class="wiggle"><img src="./assets/line.png" alt=""></div class="wiggle">
             </div>
           </li>
-          <li>
-            <div class="projectImage"><img src="./assets/project2.jpg" alt=""></div>
+          <li class="project">
+            <div class="projectImage">
+              <img src="./assets/project2.jpg" alt="Palm trees behind a blurry colour spectrum.">
+              <button class="closeProject">x</button>
+            </div>
             <div class="projectText">
               <h2 class="sideLine">Project 2</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis reiciendis quasi dolorum praesentium ipsam. Aspernatur doloremque quod est deleniti nostrum?</p>
-              <a href="">View project</a>
+              <button class="viewProject">View project</button class="viewProject">
               <div class="wiggle"><img src="./assets//line.png" alt=""></div>
             </div>
           </li>
@@ -59,24 +65,36 @@
     </section>
     <section>
       <div class="wrapper">
-        <p class="slogan">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, explicabo laborum! Sed minus voluptas quo repudiandae eligendi. Accusantium necessitatibus dolorum perspiciatis incidunt totam blanditiis voluptas!</p>
+        <p class="slogan">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
       </div>
     </section>
   </main>
   <footer id="contact">
     <div class="wrapper">
-      <nav>
-        <h3>.SPRNT</h3>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#works">Works</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <aside>
-  
-      </aside>
+      <div class="contactFlex">
+        <nav class="contactNav">
+          <h3>.SPRNT</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <aside>
+          <ul class="contactIconList" id="contactIconList">
+            <li><a href="#"><img src="./assets/web.svg" alt="Visit our main website."></a></li>
+            <li><a href="https://www.linkedin.com" target="_blank"><img src="./assets/linkedin.svg" alt="Visit our linkedin company page."></a></li>
+            <li><a href="#"><img src="./assets/phone.svg" alt="Give us a call."></a></li>
+            <li><a href="mailto:email@sprnt.com"><img src="./assets/email.svg" alt="Shoot us an email."></a></li>
+          </ul>
+          <form>
+            <label for="message">Leave a memo</label>
+            <textarea name="message" id="message"></textarea>
+            <button class="memoButton"><img src="./assets/airplane.svg" alt="Send us your memo"></button>
+          </form>
+        </aside>
+      </div>
     </div>
   </footer>
   <!-- jQuery -->

@@ -6,10 +6,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 *, *:before, *:after {box-sizing: inherit}
 
-.visually-hidden:not(:focus):not(:active) { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; /* added line */}
-
-
-
+.visuallyhidden:not(:focus):not(:active) { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; /* added line */}
 
 
 /* 
@@ -24,7 +21,7 @@ html { font-size: 62.5%; }
 a, a:visited { text-decoration: none; color: inherit }
 ul { list-style: none; padding: 0; margin: 0; }
 .wrapper { max-width: 1080px; width: 90%; margin: 0 auto; }
-
+body { overflow-x: hidden; }
 
 nav {
  
@@ -40,7 +37,7 @@ nav {
 .headerNav a {
   padding: 10px;
 }
-.headerNav li:hover {
+nav li:hover {
   color: #FF4040;
 }
 
@@ -114,8 +111,9 @@ header h1 {
   width: 50%;
 }
 
-.projectImage{
+.projectImage {
   padding: 25px;
+  position: relative;
 }
 .projectImage img {
   box-shadow: 10px 10px 0px #FF8476;
@@ -123,7 +121,20 @@ header h1 {
   z-index: 2;
   right: 50px;
 }
-
+.closeProject {
+  position: absolute;
+  z-index: 3;
+  top: 10px;
+  left: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #FF4040;
+  font-size: 2rem;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  opacity: 0;
+}
 
 .projectText {
   display: flex;
@@ -144,13 +155,15 @@ header h1 {
   margin-top: 75px;
   margin-bottom: 30px;
 }
-.projectText a {
+.projectText button {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   background-color: #505050;
+  border: none;
   padding: 15px 10px;
   text-align: center;
   color: #fff;
+  cursor: pointer;
 }
 .wiggle {
   position: absolute;
@@ -170,6 +183,10 @@ header h1 {
   right: 0;
   left: -100px;
 }
+.projectsList li:nth-of-type(2n) .closeProject{
+  right: -40px;
+  left: 100%;
+}
 .sideLine {
   position: relative;
 }
@@ -183,4 +200,83 @@ header h1 {
   background-color: #484848;
   left: 130px;
   bottom: 50%;
+}
+
+.slogan {
+  font-size: 3rem;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  width: 90%;
+  margin: 150px auto 105px;
+}
+
+footer {
+  background-color: #3E3E3E;
+  color: #fff;
+}
+.contactFlex {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+.contactFlex aside,
+.contactFlex nav {
+  width: 50%;
+}
+.contactFlex h3 {
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  color: #FB402C;
+}
+.contactFlex nav ul {
+  padding-top: 20px;
+  
+}
+.contactFlex nav li {
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-left: 1px solid #fff;
+  font-style: 1.6rem;
+}
+.contactIconList {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.contactIconList img {
+  height: 25px;
+  width: 25px;
+  margin: 0 20px;
+} 
+.memoButton {
+  width: 69px;
+  height: 69px;
+  background-color: #FB402C;
+  border: none;
+  padding: 15px;
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  cursor: pointer;
+}
+.memoButton:hover {
+  background-color: #FF8476;
+}
+.contactFlex label {
+  font-size: 1.6rem;
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+  padding: 20px 0;
+}
+.contactFlex textarea {
+  width: 100%;
+  height: 120px;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+.contactFlex form {
+  position: relative;
 }
