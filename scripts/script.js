@@ -40,24 +40,10 @@ $(document).ready(function(){
     gsap.to(this, animations.normal);
   });
 
-  $('.project').on('click', 'button', function() {
-    const project = $(this.parentNode.parentNode);
-    const image = project.find('.projectImage');
-    const text = project.find('.projectText');
-
-    const showProject = $(this).hasClass('viewProject');
-    console.log(showProject);
-
-    const fadeOut = { duration: showProject?0:1, opacity: showProject?0:1, position: showProject?'absolute':'relative' };
-    const imageScale = { 'object-fit':'cover', duration: 1 }
-    const expand = { duration: 1, width: showProject?'100%':'50%' };
-    const show = { duration: 0.25, opacity: showProject?1:0 };
-
-    gsap.to(text, fadeOut)
-    gsap.to(image.find('img'), imageScale)
-    gsap.to(image, expand)
-    gsap.to(project.find('.closeProject'), show);
-
+  $('.project button').hover(function() {
+    gsap.to(this, {duration: 0.35, scale:1.05});
+  }, function() {
+    gsap.to(this, animations.normal);
   });
   
   var aboutIntro = gsap.timeline({paused: true});
